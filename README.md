@@ -6,16 +6,17 @@ axios adaptor for `Taro.request`
 有用点小星星支持~
 
 # Quick start
-1. npm install axios
-2. create instance
+1. `npm i axios`
+2. `npm i axios-taro-adapter`
+3. create axios instance
 ```js
-import { taroAdapter } from "axios-taro-adapter";
+import { TaroAdapter } from "axios-taro-adapter";
 
 const API_URL = "https://api.xxxx.com/";
 const instance = axios.create({
   baseURL: API_URL,
   timeout: 10000,
-  adapter: taroAdapter, // add this line，添加这一行使用taroAdapter
+  adapter: TaroAdapter, // add this line，添加这一行使用taroAdapter
 });
 
 // interceptors for request
@@ -42,4 +43,3 @@ instance.interceptors.response.use(
   }
 );
 ```
-3. enjoy axios

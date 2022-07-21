@@ -1,6 +1,6 @@
 {
   "name": "axios-taro-adapter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "axios adaptor for taro.request",
   "main": "index.js",
   "scripts": {
