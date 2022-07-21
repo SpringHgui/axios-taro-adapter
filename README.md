@@ -1,7 +1,9 @@
 # axios-taro-adapter
 axios adaptor for `Taro.request`
 
-在`Taroa`项目中完美使用`axios`框架，统一代码风格。
+基于`axios`支持自定义适配器，只需要针对不同环境下的http请求api进行适配进行替换，`axios`可以使用在任意平台。  
+由于`axios`在其他项目中大量使用，本项目实现`Taro`框架下的适配器，可以在`Taroa`项目中完美使用原汁原味的`axios`，统一团队前端技术栈，统一http请求类库。 
+采用此方式对项目零侵入，开发者专注于`axios`的api即可。
 
 有用点小星星支持~
 
@@ -9,6 +11,8 @@ axios adaptor for `Taro.request`
 1. `npm i axios`
 2. `npm i axios-taro-adapter`
 3. create axios instance
+
+仅需2行代码，完美使用`axios`替换`Taro.request`
 
 ```js
 import { TaroAdapter } from "axios-taro-adapter";
@@ -19,7 +23,10 @@ const instance = axios.create({
   timeout: 10000,
   adapter: TaroAdapter, // add this line，添加这一行使用taroAdapter
 });
-
+```
+例如：
+原汁原味的拦截器
+```js
 // interceptors for request
 instance.interceptors.request.use(
   function (config) {
