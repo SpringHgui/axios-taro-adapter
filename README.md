@@ -9,6 +9,7 @@ axios adaptor for `Taro.request`
 1. `npm i axios`
 2. `npm i axios-taro-adapter`
 3. create axios instance
+
 ```js
 import { TaroAdapter } from "axios-taro-adapter";
 
