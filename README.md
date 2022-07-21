@@ -3,7 +3,9 @@
 ![NPM](https://img.shields.io/npm/l/axios-taro-adapter)
 
 基于`axios`支持自定义适配器，只需要针对不同环境下的http请求api进行适配进行替换，`axios`可以使用在任意平台。  
+
 由于`axios`在其他项目中大量使用，本项目实现`Taro`框架下的适配器，可以在`Taroa`项目中完美使用原汁原味的`axios`，统一团队前端技术栈，统一http请求类库。 
+
 采用此方式对项目零侵入，开发者专注于`axios`的api即可。
 
 有用点小星星支持~
