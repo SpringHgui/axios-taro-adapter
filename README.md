@@ -18,6 +18,7 @@
 仅需2行代码，完美使用`axios`替换`Taro.request`
 
 ```js
+import axios from "axios";
 import { TaroAdapter } from "axios-taro-adapter";
 
 const API_URL = "https://api.xxxx.com/";
