@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/SpringHgui/axios-taro-adapter#readme",
   "dependencies": {
-    "@tarojs/taro": "^3.4.0"
+    "@tarojs/taro": "^3.4.0",
+    "qs": "^6.11.0"
   }
 }

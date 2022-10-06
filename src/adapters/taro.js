@@ -1,5 +1,5 @@
 import Taro from "@tarojs/taro";
-
+import qs from 'qs'
 function settle(resolve, reject, res, failed){
   if (!failed) {
     resolve(res);
@@ -10,9 +10,13 @@ function settle(resolve, reject, res, failed){
 
 export default function taroAdapter(config) {
   return new Promise((resolve,reject)=>{
+    const { params = {} } = config;
+    const query = Object.values(params).length
+      ? "?" + qs.stringify(params)
+      : "";
     Taro.request({
       ...config,
-      url: config.baseURL + config.url,
+      url: config.baseURL + config.url + query,
       data: config.data,
       method: config.method,
       header: config.headers,
