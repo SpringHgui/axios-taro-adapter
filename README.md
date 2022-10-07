@@ -23,6 +23,7 @@
 仅需2行代码，完美使用`axios`替换`Taro.request`
 
 ```js
+// api.js
 import axios from "axios";
 import { TaroAdapter } from "axios-taro-adapter";
 
@@ -32,6 +33,10 @@ const instance = axios.create({
   timeout: 10000,
   adapter: TaroAdapter, // add this line，添加这一行使用taroAdapter
 });
+
+export const postData = data => {
+    return instance.post("/api/test", data);
+}
 ```
 例如：
 原汁原味的拦截器
