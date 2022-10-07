@@ -10,8 +10,13 @@
 
 有用点小星星支持~
 
+# 注意事项
+
+`axios`版本不宜使用最新，可能会导致`taro`编译后出现各种问题
+推荐使用 `0.27.2`
+
 # Quick start
-1. `npm i axios`
+1. `npm i axios@0.27.2`
 2. `npm i axios-taro-adapter`
 3. create axios instance
 
